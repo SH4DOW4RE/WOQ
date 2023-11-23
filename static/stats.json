@@ -1,1 +1,31 @@
-{"player1": {"max-health": 30, "curr-health": 23}, "player2": {"max-health": 30, "curr-health": 30}, "goblin": {"max-health": 10, "curr-health": -1}, "orc1": {"max-health": 30, "curr-health": 30}, "orc2": {"max-health": 30, "curr-health": 30}, "dragon": {"max-health": 50, "curr-health": 50}}
+{
+    "player1": {
+        "max-health": 30,
+        "curr-health": 30
+    },
+
+    "player2": {
+        "max-health": 30,
+        "curr-health": 30
+    },
+
+    "goblin": {
+        "max-health": 10,
+        "curr-health": 10
+    },
+
+    "orc1": {
+        "max-health": 30,
+        "curr-health": 30
+    },
+
+    "orc2": {
+        "max-health": 30,
+        "curr-health": 30
+    },
+
+    "dragon": {
+        "max-health": 50,
+        "curr-health": 50
+    }
+}
