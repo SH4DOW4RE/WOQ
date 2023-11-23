@@ -3,6 +3,7 @@ import socket
 from random import randint
 import json
 import os
+import math
 
 
 app = Flask(__name__)
@@ -140,34 +141,33 @@ def playing(skip = False, args=[]):
         return play()
     elif player == "1" and question != None and answer == "-2" and topic != "-1":
         # Continue battle
-        if attacked == 'player': atd = 'player' + player
-        else: atd = attacked
+        if attacker == 'player':
+            atk = attacker + player
+        else:
+            atk = attacker
+        if attacked == 'player':
+            atd = attacked + player
+        else:
+            atd = attacked
         with open('static/stats.json', 'r') as f:
             data = json.load(f)
-        mah = data[f'player{player}']['max-health']
-        cah = data[f'player{player}']['curr-health']
-        mdh = data[atd]['max-health']
+        cah = data[atk]['curr-health']
         cdh = data[atd]['curr-health']
-        d = attacker if attacker != 'player' else atd
+        d_ = attacker if attacker != 'player' else attacked
         difficulty = int(topic)
         
         killed = False
         if attacker == 'player':
             cdh -= difficulty
         else:
-            print(question)
-            if question == "-11":
+            if question == "-10":
                 if difficulty == 1:
-                    difficulty = difficulty
-            else:
-                difficulty = round(difficulty * .8)
-                if difficulty < 1:
-                    difficulty = 1
-            cah -= difficulty
-        if data[f'player{player}']['curr-health'] <= 0:
-            return render_template('game_over.html')
-        if data[d]['curr-health'] <= 0:
-            killed = True
+                    difficulty = 0
+                else:
+                    difficulty = math.floor(difficulty * .8)
+                    if difficulty < 1:
+                        difficulty = 1
+            cdh -= difficulty
         with open('static/stats.json', 'r') as f:
             data = json.load(f)
         data['player1']['curr-health'] = cah
@@ -175,13 +175,25 @@ def playing(skip = False, args=[]):
         os.remove('static/stats.json')
         with open('static/stats.json', 'w+') as f:
             json.dump(data, f)
+        if data[f'player{player}']['curr-health'] <= 0:
+            return render_template('game_over.html')
+        if data[d_]['curr-health'] <= 0:
+            killed = True
         tmp = attacker
         attacker = attacked
         attacked = tmp
-        if killed:
-            return play(killed = True)
+        print(monstersAlive())
         if not monstersAlive():
             return render_template('winner.html')
+        print(killed)
+        if killed:
+            with open('static/stats.json', 'r') as f:
+                data = json.load(f)
+            data['player1']['curr-health'] = 20 if data['player1']['curr-health'] < 20 else data['player1']['curr-health']
+            os.remove('static/stats.json')
+            with open('static/stats.json', 'w+') as f:
+                json.dump(data, f)
+            return play(killed = True)
         player = "1"
         question = "-3"
         answer = None
@@ -189,6 +201,126 @@ def playing(skip = False, args=[]):
         args = [player, question, answer, topic, attacker, attacked]
         return playing(skip = True, args = args)
     elif player == "1" and question != None and answer != None and topic != "-1":
+        # Show answer
+        topic = 'HTML' if topic == "1" else 'CSS'
+        with open(f'static/questions/{topic.lower()}.json') as f:
+                data = json.load(f)
+        ai = data[f'questions{question}']['answer']
+        correct = 'Correct' if int(answer) == ai else 'Wrong'
+        difficulty = data[f'questions{question}']['difficulty']
+        answer = data[f'questions{question}']['possibilities'][ai]
+        return play(answer_=True, topic='ANSWER', difficulty=difficulty,
+                    answer=answer, correct=correct, attacker=attacker, attacked=attacked)
+    
+    # Player 2
+    elif (player == "2" and question == "-5" and answer == None and topic == "-1") or \
+         (player == "2" and question == "-5" and answer == None and topic == None):
+        # Ask if encounter
+        return play(battle_ = True)
+    elif (player == "2" and question == None and answer == None and topic == "-1") or \
+         (player == "2" and question == None and answer == None and topic == None):
+        # Roll the dice
+        roll = randint(1, 5)
+        return play(roll = roll, die_val = roll)
+    elif (player == "2" and question == "-1" and answer == None and topic == "-1") or \
+         (player == "2" and question == "-1" and answer == None and topic == None):
+        # Ask wich monster
+        return play(encounter = True)
+    elif (player == "2" and question == "-3" and answer == None and topic == "-1") or \
+         (player == "2" and question == "-3" and answer == None and topic == None):
+        # Ask a question
+        cont = True
+        while cont:
+            topic = 'HTML' if randint(0, 1) == 1 else 'CSS'
+            difficulty = randint(1, 10)
+            with open(f'static/questions/{topic.lower()}.json') as f:
+                data = json.load(f)
+            qs = []
+            questions = []
+            for i in range(20):
+                qs.append(data[f'questions{i+1}'])
+            for i in range(len(qs)):
+                if qs[i]['difficulty'] == difficulty:
+                    questions.append(qs[i])
+            cont = False
+            try: question_index = randint(1, len(questions)) - 1
+            except: cont = True
+        question = questions[question_index]['question']
+        answer1 = questions[question_index]['possibilities'][0]
+        answer2 = questions[question_index]['possibilities'][1]
+        answer3 = questions[question_index]['possibilities'][2]
+        answer4 = questions[question_index]['possibilities'][3]
+        for i in range(len(qs)):
+            if qs[i]['question'] == question:
+                qi = i + 1
+        if attacker == '':
+            attacker = 'player'
+        else:
+            attacker = attacker
+        return play(question_=True, topic=topic, difficulty=difficulty,
+                    question=question, question_index=str(qi),
+                    answer1=answer1, answer2=answer2,
+                    answer3=answer3, answer4=answer4, attacker=attacker, attacked=attacked)
+    elif (player == "2" and question == "-2" and answer == None and topic == "-1") or \
+         (player == "2" and question == "-2" and answer == None and topic == None):
+        # No battle
+        return play()
+    elif player == "2" and question != None and answer == "-2" and topic != "-1":
+        # Continue battle
+        if attacker == 'player':
+            atk = attacker + player
+        else:
+            atk = attacker
+        if attacked == 'player':
+            atd = attacked + player
+        else:
+            atd = attacked
+        with open('static/stats.json', 'r') as f:
+            data = json.load(f)
+        cah = data[atk]['curr-health']
+        cdh = data[atd]['curr-health']
+        d_ = attacker if attacker != 'player' else attacked
+        difficulty = int(topic)
+        
+        killed = False
+        if attacker == 'player':
+            cdh -= difficulty
+        else:
+            if question == "-10":
+                if difficulty == 1:
+                    difficulty = 0
+                else:
+                    difficulty = math.floor(difficulty * .8)
+                    if difficulty < 1:
+                        difficulty = 1
+            cdh -= difficulty
+        with open('static/stats.json', 'r') as f:
+            data = json.load(f)
+        data['player1']['curr-health'] = cah
+        data[atd]['curr-health'] = cdh
+        os.remove('static/stats.json')
+        with open('static/stats.json', 'w+') as f:
+            json.dump(data, f)
+        if data[f'player{player}']['curr-health'] <= 0:
+            return render_template('game_over.html')
+        if data[d_]['curr-health'] <= 0:
+            killed = True
+        tmp = attacker
+        attacker = attacked
+        attacked = tmp
+        print(monstersAlive())
+        if not monstersAlive():
+            return render_template('winner.html')
+        print(killed)
+        if killed:
+            return play(killed = True)
+        player = "2"
+        question = "-3"
+        answer = None
+        topic = "-1"
+        args = [player, question, answer, topic, attacker, attacked]
+        return playing(skip = True, args = args)
+    elif player == "2" and question != None and answer != None and topic != "-1":
         # Show answer
         topic = 'HTML' if topic == "1" else 'CSS'
         with open(f'static/questions/{topic.lower()}.json') as f:

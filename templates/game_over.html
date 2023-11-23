@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WOQ | Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0, user-scalable=no">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/game_over.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" type="image/x-icon">
+        <script src="{{ url_for('static', filename='js/game_over.js') }}"></script>
+    </head>
+    <body onload="reset();">
+        <div class="container">
+            <div class="title">
+                Game Over
+            </div>
+            <div class="subtitle">
+                You've died.
+            </div>
+        </div>
+    </body>
+</html>
