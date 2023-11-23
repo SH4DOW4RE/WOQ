@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+/* font-family: 'MedievalSharp', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 20px;
+}
+
+body {
+    background: url("/static/assets/background.png"), black;
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.container {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.title {
+    padding-top: 3vh;
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.bt {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    width: 303px;
+    height: 82px;
+    border: none;
+    background-color: transparent;
+    opacity: 1;
+}
+
+input {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    width: 303px;
+    height: 82px;
+    border: none;
+    background-color: transparent;
+    opacity: 1;
+}
+
+.sumbit {
+    margin-top: 28vh;
+    background-image: url("/static/assets/dark_roll_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sumbit:hover {
+    background-image: url("/static/assets/light_roll_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.die {
+    margin-top: 10vh;
+    background-image: url("/static/assets/dark_continue_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.die:hover {
+    margin-top: 10vh;
+    background-image: url("/static/assets/light_continue_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.yes {
+    margin-top: 25vh;
+    background-image: url("/static/assets/dark_yes_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.yes:hover {
+    background-image: url("/static/assets/light_yes_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.no {
+    margin-top: 10vh;
+    background-image: url("/static/assets/dark_no_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.no:hover {
+    background-image: url("/static/assets/light_no_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card {
+    background-image: url('/static/assets/card.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin: auto;
+    padding-top: 150px;
+    width: 90vw;
+    height: 450px;
+    text-align: center;
+}
+
+.topic {
+    position: relative;
+    top: -37px;
+    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
+    font-size: 45px;
+}
+
+.difficulty {
+    position: relative;
+    top: -85px;
+    right: -37vw;
+    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
+    font-size: 30px;
+}
+
+.question {
+    position: relative;
+    top: -20px;
+    text-wrap: wrap;
+    text-align: center;
+    font-size: 30px;
+    width: 80vw;
+    margin: auto;
+    text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px;
+}
+
+.answer1 {
+    background: transparent;
+    font-size: 15px;
+    color: rgb(220, 220, 220);
+    position: absolute;
+    top: 508px;
+    left: 32px;
+    width: 165px;
+    height: 76px;
+    padding: 2px;
+    border: none;
+}
+
+.answer2 {
+    background: transparent;
+    font-size: 15px;
+    color: rgb(220, 220, 220);
+    position: absolute;
+    top: 508px;
+    right: 32px;
+    width: 165px;
+    height: 76px;
+    padding: 2px;
+    border: none;
+}
+
+.answer3 {
+    background: transparent;
+    font-size: 15px;
+    color: rgb(220, 220, 220);
+    position: absolute;
+    top: 586px;
+    left: 32px;
+    width: 165px;
+    height: 76px;
+    padding: 2px;
+    border: none;
+}
+
+.answer4 {
+    background: transparent;
+    font-size: 15px;
+    color: rgb(220, 220, 220);
+    position: absolute;
+    top: 586px;
+    right: 32px;
+    width: 165px;
+    height: 76px;
+    padding: 2px;
+    border: none;
+}
+
+.killed {
+    margin-top: 10vh;
+    background-image: url("/static/assets/dark_continue_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.killed:hover {
+    margin-top: 10vh;
+    background-image: url("/static/assets/light_continue_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.monster1 {
+    margin-top: 10vh;
+    background-image: url("/static/assets/dark_goblin_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.monster1:hover {
+    margin-top: 10vh;
+    background-image: url("/static/assets/light_goblin_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.monster2 {
+    margin-top: 10vh;
+    background-image: url("/static/assets/dark_orc_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.monster2:hover {
+    margin-top: 10vh;
+    background-image: url("/static/assets/light_orc_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.monster3 {
+    margin-top: 10vh;
+    background-image: url("/static/assets/dark_dragon_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.monster3:hover {
+    margin-top: 10vh;
+    background-image: url("/static/assets/light_dragon_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

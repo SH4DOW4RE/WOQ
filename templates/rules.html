@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WOQ | Rules</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0, user-scalable=no">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/rules.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" type="image/x-icon">
+        <script src="{{ url_for('static', filename='js/rules.js') }}"></script>
+    </head>
+    <body>
+        <div class="container">
+            <button onclick="back();" class="arrow-bt"></button>
+            <img src="{{ url_for('static', filename='assets/arrow.svg') }}" class="arrow">
+            <div class="title">
+                RULES
+            </div>
+            <br>
+            <div class="cont">
+                <div class="text">
+                    <div class="s1">Intro</div>
+                    <div class="desc">
+                        WOQ (War Of Questions) is an adventure and strategy role-playing game that is played through questions. Players play as heroes who must explore a fantasy world, fight monsters and progress through the dungeons!
+                        <br><br>Game’s goal is easy: Players advance in the dungeon by throwing a die and answering questions about the HTML/ CSS theme to defeat enemies.
+                        <br><br>Depending on the difficulty of the questions, players will be able to do more damage or less to the monsters, defend of not against their attacks.
+                    </div>
+                    <br><div class="s1">Players</div>
+                    <div class="desc">
+                        2
+                    </div>
+                    <br><div class="s1">Material</div>
+                    <div class="desc">
+                        Mobile phone (with internet)
+                    </div>
+                    <br><div class="s1">How to play?</div>
+                    <div class="desc">
+                        Place the paws in the dungeon’s entrance, both players throw the die and the player with the biggest number goes first.
+                        <br><br>Every player begins at 30 hp. The first player throws the die and move the indicated amount.
+                        <br><br>If no enemy is encountered, then it’s the second player’s turn.
+                        <br><br>If there is an encounter (a player if in front of an enemy), then it’s time to fight!
+                        <br><br><span class="dash">-</span>	The player entering the fight starts by choosing an attack damage based on the difficulty of the question they want to try and answer, ranging from 1 to 10.
+                        <br><br><span class="dash">-</span>	Then it’s the monster’s turn, it will pick a random question with a difficulty (damage) rating based on the monster presence (a goblin will have a low damage compared to a big troll or orc).
+                        <br><br><span class="dash">-</span>	Then it’s the other player’s turn, they have a choice, go and fight other enemies or go and help the first player in their fight.
+                        <br><br><span class="dash">-</span>	Then the turns are as followed:
+                        <br><br>  <span class="dash">°</span>	One player battle: Player, Monster, Player, Monster…
+                        <br><br>  <span class="dash">°</span>	Two player battle: Player 1, Player 2, Monster, Player 1, Player 2, Monster…
+                        <br><br><span class="dash">-</span>	Defense :
+                        <br><br>  <span class="dash">°</span>	A player can defend against an enemy’s attack by answering correctly to the question. If answered correctly, the damage will be reduced to 80% to a maximum of 1 damage (except 1 damage questions, they will be completely blocked).
+                        <br><br>  <span class="dash">°</span>	If not answered correctly the full damage will be dealt.
+                        <br><br>The goal is to defeat all enemies and travel to the end of the dungeon floor.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

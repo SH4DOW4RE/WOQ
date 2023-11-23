@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WOQ | Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0, user-scalable=no">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" type="image/x-icon">
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    </head>
+    <body onload="reset();">
+        <div class="container">
+            <div class="title">
+                Welcome to
+                <div class="letters">WOQ</div>
+            </div>
+            <div class="buttons">
+                <button class="play" onclick="play();"></button><br>
+                <button class="rules" onclick="rules();"></button>
+            </div>
+        </div>
+    </body>
+</html>

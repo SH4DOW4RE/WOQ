@@ -1,0 +1,222 @@
+{
+    "questions1": {
+        "difficulty": 4,
+        "question": "What does CSS stand for?",
+        "possibilities": [
+            "Counter Style Sheet",
+            "Cascading Style Sheet",
+            "Central Style Sheet",
+            "Computer Style Sheet"
+        ],
+        "answer": 1
+    },
+    "questions2": {
+        "difficulty": 6,
+        "question": "How can you apply an external CSS file to an HTML document?",
+        "possibilities": [
+            "<style>",
+            "<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">",
+            "<css src=\"styles.css\">",
+            "<head>"
+        ],
+        "answer": 1
+    },
+    "questions3": {
+        "difficulty": 9,
+        "question": "What is the purpose of the CSS `z-index` property?",
+        "possibilities": [
+            "Sets the transparency of an element",
+            "Specifies the order of stacking context",
+            "Controls the rotation of an element",
+            "Defines the size of an element"
+        ],
+        "answer": 1
+    },
+    "questions4": {
+        "difficulty": 3,
+        "question": "How can you select all paragraphs in CSS?",
+        "possibilities": [
+            "<p>",
+            ".paragraph",
+            "#paragraph",
+            "p"
+        ],
+        "answer": 3
+    },
+    "questions5": {
+        "difficulty": 7,
+        "question": "What is the purpose of the CSS `box-sizing` property?",
+        "possibilities": [
+            "Adjusts the size of the font in a box",
+            "Sets the width and height of an element",
+            "Specifies whether padding should be included in the element's total width and height",
+            "Defines the border style of an element"
+        ],
+        "answer": 2
+    },
+    "questions6": {
+        "difficulty": 7,
+        "question": "What is the purpose of the CSS `float` property?",
+        "possibilities": [
+            "Specifies the alignment of text",
+            "Clears the floating elements",
+            "Defines the spacing between elements",
+            "Positions an element to the left or right of its container"
+        ],
+        "answer": 3
+    },
+    "questions7": {
+        "difficulty": 4,
+        "question": "How can you apply CSS styles to an element with the id `header`?",
+        "possibilities": [
+            "#header { ... }",
+            ".header { ... }",
+            "header { ... }",
+            "element#header { ... }"
+        ],
+        "answer": 0
+    },
+    "questions8": {
+        "difficulty": 9,
+        "question": "What is the purpose of the CSS `pseudo-class`?",
+        "possibilities": [
+            "Targets specific elements based on their state or position",
+            "Applies styles to all elements in the document",
+            "Sets the font size of an element",
+            "Controls the visibility of an element"
+        ],
+        "answer": 0
+    },
+    "questions9": {
+        "difficulty": 3,
+        "question": "How can you center an element horizontally in CSS?",
+        "possibilities": [
+            "text-align: center;",
+            "margin: auto;",
+            "align: center;",
+            "float: center;"
+        ],
+        "answer": 1
+    },
+    "questions10": {
+        "difficulty": 6,
+        "question": "What does the CSS property `box-shadow` do?",
+        "possibilities": [
+            "Adds a shadow to the background of an element",
+            "Applies a shadow to the border of an element",
+            "Creates a shadow beneath the text of an element",
+            "Sets the shadow of the entire document"
+        ],
+        "answer": 1
+    },
+    "questions11": {
+        "difficulty": 5,
+        "question": "How can you hide an element in CSS without affecting the layout?",
+        "possibilities": [
+            "visibility: hidden;",
+            "display: none;",
+            "opacity: 0;",
+            "position: absolute; top: -9999px;"
+        ],
+        "answer": 0
+    },
+    "questions12": {
+        "difficulty": 8,
+        "question": "What is the purpose of the CSS `media queries`?",
+        "possibilities": [
+            "Applies styles based on user preferences",
+            "Adjusts styles based on the device characteristics",
+            "Targets specific elements during user interaction",
+            "Defines styles for print documents"
+        ],
+        "answer": 1
+    },
+    "questions13": {
+        "difficulty": 2,
+        "question": "How can you set the background color of an element in CSS?",
+        "possibilities": [
+            "color: background;",
+            "background-color: #RRGGBB;",
+            "set-background: #RRGGBB;",
+            "bg-color: #RRGGBB;"
+        ],
+        "answer": 1
+    },
+    "questions14": {
+        "difficulty": 7,
+        "question": "What is the purpose of the CSS `transition` property?",
+        "possibilities": [
+            "Defines the duration of an animation",
+            "Specifies the order of layered elements",
+            "Creates a smooth transition between property values",
+            "Sets the timing function for keyframe animations"
+        ],
+        "answer": 2
+    },
+    "questions15": {
+        "difficulty": 4,
+        "question": "How can you select all even rows of a table in CSS?",
+        "possibilities": [
+            "tr:even",
+            "tr:nth-child(even)",
+            "tr.even",
+            "tr > even"
+        ],
+        "answer": 1
+    },
+    "questions16": {
+        "difficulty": 8,
+        "question": "What is the `box model` in CSS?",
+        "possibilities": [
+            "A model for positioning elements on a webpage",
+            "A set of rules for creating flexible box layouts",
+            "A model that defines the structure of an HTML document",
+            "A model that describes how the space around an element is structured"
+        ],
+        "answer": 3
+    },
+    "questions17": {
+        "difficulty": 5,
+        "question": "How can you center an element both horizontally and vertically in CSS?",
+        "possibilities": [
+            "margin: auto;",
+            "position: center;",
+            "align: center;",
+            "center: true;"
+        ],
+        "answer": 0
+    },
+    "questions18": {
+        "difficulty": 7,
+        "question": "Explain the difference between `margin` and `padding` in CSS.",
+        "possibilities": [
+            "Margin adds space outside the border, and padding adds space inside the border.",
+            "Margin adds space inside the border, and padding adds space outside the border.",
+            "Margin and padding are interchangeable terms in CSS.",
+            "Margin and padding have the same function in CSS."
+        ],
+        "answer": 0
+    },
+    "questions19": {
+        "difficulty": 3,
+        "question": "What is the purpose of the CSS `font-weight` property?",
+        "possibilities": [
+            "Sets the font size of an element",
+            "Defines the thickness of characters in a text",
+            "Changes the font family of an element",
+            "Adjusts the spacing between characters"
+        ],
+        "answer": 1
+    },
+    "questions20": {
+        "difficulty": 6,
+        "question": "How can you create a responsive design in CSS?",
+        "possibilities": [
+            "Using fixed-width layouts",
+            "Using percentage-based widths",
+            "Applying a constant pixel size to elements",
+            "Ignoring media queries"
+        ],
+        "answer": 1
+    }
+}

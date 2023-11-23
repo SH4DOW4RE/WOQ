@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WOQ | Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1 user-scalable=0, user-scalable=no">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" type="image/x-icon">
+        <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                Player Select
+            </div>
+            <div class="buttons">
+                <button class="player1" onclick="player1();"></button><br>
+                <button class="player2" onclick="player2();"></button>
+            </div>
+        </div>
+    </body>
+</html>

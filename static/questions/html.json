@@ -1,0 +1,222 @@
+{
+    "questions1": {
+        "difficulty": 3,
+        "question": "What does HTML stand for?",
+        "possibilities": [
+            "HyperText Markup Language",
+            "High-Level Text Markup Language",
+            "HyperTransfer Markup Language",
+            "Hyperlink and Text Markup Language"
+        ],
+        "answer": 0
+    },
+    "questions2": {
+        "difficulty": 5,
+        "question": "Which HTML tag is used for creating an ordered list?",
+        "possibilities": [
+            "<ul>",
+            "<li>",
+            "<ol>",
+            "<dl>"
+        ],
+        "answer": 2
+    },
+    "questions3": {
+        "difficulty": 7,
+        "question": "What is the purpose of the HTML `meta` tag?",
+        "possibilities": [
+            "Define a paragraph",
+            "Provide metadata about the document",
+            "Create a hyperlink",
+            "Embed multimedia content"
+        ],
+        "answer": 1
+    },
+    "questions4": {
+        "difficulty": 2,
+        "question": "In HTML, which attribute is used to specify the alternative text for an image?",
+        "possibilities": [
+            "alt",
+            "title",
+            "src",
+            "link"
+        ],
+        "answer": 0
+    },
+    "questions5": {
+        "difficulty": 8,
+        "question": "What is the correct HTML for creating a hyperlink?",
+        "possibilities": [
+            "<link>",
+            "<a href=\"url\">link text</a>",
+            "<href>",
+            "<url>link text</url>"
+        ],
+        "answer": 1
+    },
+    "questions6": {
+        "difficulty": 5,
+        "question": "What is the purpose of the HTML `doctype` declaration?",
+        "possibilities": [
+            "Defines the document type and version of HTML",
+            "Specifies the character encoding of the document",
+            "Declares a new HTML element",
+            "Indicates the language of the document"
+        ],
+        "answer": 0
+    },
+    "questions7": {
+        "difficulty": 8,
+        "question": "In HTML, what does the `data-` attribute prefix indicate?",
+        "possibilities": [
+            "It is used for creating custom attributes",
+            "It specifies the document's primary language",
+            "It denotes a deprecated HTML feature",
+            "It represents the data type of an input element"
+        ],
+        "answer": 0
+    },
+    "questions8": {
+        "difficulty": 3,
+        "question": "Which HTML tag is used for creating a line break?",
+        "possibilities": [
+            "<br>",
+            "<lb>",
+            "<break>",
+            "<newline>"
+        ],
+        "answer": 0
+    },
+    "questions9": {
+        "difficulty": 6,
+        "question": "What is the purpose of the HTML `form` element?",
+        "possibilities": [
+            "Creates a hyperlink",
+            "Defines a navigation menu",
+            "Specifies a container for user input",
+            "Embeds external content into a document"
+        ],
+        "answer": 2
+    },
+    "questions10": {
+        "difficulty": 2,
+        "question": "Which HTML tag is used for creating a hyperlink?",
+        "possibilities": [
+            "<link>",
+            "<a>",
+            "<href>",
+            "<url>"
+        ],
+        "answer": 1
+    },
+    "questions11": {
+        "difficulty": 8,
+        "question": "What is the purpose of the HTML `canvas` element?",
+        "possibilities": [
+            "Defines a container for external content",
+            "Creates a responsive layout for the webpage",
+            "Allows drawing graphics using JavaScript",
+            "Specifies a region for embedded multimedia"
+        ],
+        "answer": 2
+    },
+    "questions12": {
+        "difficulty": 4,
+        "question": "Which HTML tag is used to embed an audio file?",
+        "possibilities": [
+            "<audio>",
+            "<sound>",
+            "<music>",
+            "<media>"
+        ],
+        "answer": 0
+    },
+    "questions13": {
+        "difficulty": 6,
+        "question": "What does the HTML `lang` attribute specify?",
+        "possibilities": [
+            "The style of the document",
+            "The primary color scheme",
+            "The character encoding of the document",
+            "The language of the document"
+        ],
+        "answer": 3
+    },
+    "questions14": {
+        "difficulty": 3,
+        "question": "In HTML, which tag is used to define a table row?",
+        "possibilities": [
+            "<tr>",
+            "<td>",
+            "<th>",
+            "<table-row>"
+        ],
+        "answer": 0
+    },
+    "questions15": {
+        "difficulty": 9,
+        "question": "What is the purpose of the HTML `iframe` element?",
+        "possibilities": [
+            "Embeds an inline image",
+            "Creates an interactive form",
+            "Displays content from another source within the webpage",
+            "Defines an inline frame for styling purposes"
+        ],
+        "answer": 2
+    },
+    "questions16": {
+        "difficulty": 6,
+        "question": "What is the purpose of the HTML `blockquote` element?",
+        "possibilities": [
+            "Defines a block of code",
+            "Creates a block-level quotation",
+            "Specifies a block of navigation links",
+            "Formats a block of text in italics"
+        ],
+        "answer": 1
+    },
+    "questions17": {
+        "difficulty": 9,
+        "question": "Explain the difference between the `GET` and `POST` methods in an HTML form.",
+        "possibilities": [
+            "GET is used for submitting forms, and POST is used for retrieving data.",
+            "GET is used for retrieving data, and POST is used for submitting forms.",
+            "Both GET and POST are used for the same purpose.",
+            "There is no difference between GET and POST in form submissions."
+        ],
+        "answer": 1
+    },
+    "questions18": {
+        "difficulty": 4,
+        "question": "Which HTML tag is used to create a hyperlink to an email address?",
+        "possibilities": [
+            "<mail>",
+            "<email>",
+            "<a href=\"mailto:\">...</a>",
+            "<link mailto=\"\">"
+        ],
+        "answer": 2
+    },
+    "questions19": {
+        "difficulty": 7,
+        "question": "What is the purpose of the HTML `article` element?",
+        "possibilities": [
+            "Represents an independent piece of content",
+            "Defines a section of navigation links",
+            "Specifies an article's publication date",
+            "Creates a block of code"
+        ],
+        "answer": 0
+    },
+    "questions20": {
+        "difficulty": 3,
+        "question": "In HTML, which attribute is used to define inline styles?",
+        "possibilities": [
+            "style",
+            "inline",
+            "css",
+            "design"
+        ],
+        "answer": 0
+    }
+}
