@@ -313,6 +313,12 @@ def playing(skip = False, args=[]):
             return render_template('winner.html')
         print(killed)
         if killed:
+            with open('static/stats.json', 'r') as f:
+                data = json.load(f)
+            data['player1']['curr-health'] = 20 if data['player1']['curr-health'] < 20 else data['player1']['curr-health']
+            os.remove('static/stats.json')
+            with open('static/stats.json', 'w+') as f:
+                json.dump(data, f)
             return play(killed = True)
         player = "2"
         question = "-3"
